@@ -1,0 +1,42 @@
+.chat__messageSender {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.chat__nameSender {
+  position: absolute;
+  font-weight: 800;
+  font-size: xx-small;
+  top: -15px;
+}
+
+.chat__messageReceiver {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: #dcf8c6;
+  margin-bottom: 30px;
+  margin-left: auto;
+}
+
+.chat__nameReceiver {
+  position: absolute;
+  font-weight: 800;
+  font-size: xx-small;
+  top: -15px;
+  right: 0;
+}
+
+.chat__timestamp {
+  margin-left: 10px;
+  font-size: xx-small;
+  position: relative;
+  bottom: -10px;
+}
