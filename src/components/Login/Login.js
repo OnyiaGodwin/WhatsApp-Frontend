@@ -16,12 +16,12 @@ export default function Login() {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        console.log(
-          "This is the result of sign in ==>",
-          result.user.multiFactor.user
-        );
+        // console.log(
+        //   "This is the result of sign in ==>",
+        //   result.user.multiFactor.user
+        // );
 
-        console.log("dispatch is about to start");
+        // console.log("dispatch is about to start");
         dispatch({
           type: actionTypes.SET_USER,
           user: result.user.multiFactor.user,

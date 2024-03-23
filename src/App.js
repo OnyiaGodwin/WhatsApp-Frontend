@@ -47,7 +47,7 @@ function App() {
     };
   }, [messages, dispatch]);
 
-  console.log("This is all the fetched messages", messages);
+  // console.log("This is all the fetched messages", messages);
 
   return (
     <div className={!user ? "app__signIn" : "app"}>

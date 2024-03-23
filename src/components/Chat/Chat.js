@@ -20,7 +20,7 @@ export default function Chat({ messages }) {
 
   const [input, setInput] = useState("");
 
-  console.log("Messages Received:", messages);
+  // console.log("Messages Received:", messages);
 
   const timestamp = new Date().toUTCString();
   const shortTimestamp = timestamp.slice(17, 22);
