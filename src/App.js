@@ -6,9 +6,13 @@ import "./App.css";
 import Chat from "./components/Chat/Chat";
 import SideBar from "./components/SideBar/SideBar";
 import axios from "./axios";
+import { useStateValue } from "./Store/StateProvider";
+import { actionTypes } from "./Store/reducer";
+import Login from "./components/Login/Login";
 
 function App() {
   const [messages, setMessages] = useState([]);
+  const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
     axios.get("/messages/sync").then((response) => {
@@ -31,17 +35,23 @@ function App() {
       setMessages([...messages, newMessage]);
     });
 
+    dispatch({
+      type: actionTypes.SET_MESSAGE,
+      message: messages,
+    });
+
     // Clean up function
     return () => {
       channel.unbind_all();
       channel.unsubscribe();
-    }
-  }, [messages]);
+    };
+  }, [messages, dispatch]);
 
   console.log("This is all the fetched messages", messages);
 
   return (
-    <div className="app">
+    <div className={!user ? "app__signIn" : "app"}>
+      {!user ?  <Login /> :
       <div className="app__body">
         <div className="app__sidebar">
           {/* Sidebar Component */}
@@ -51,7 +61,7 @@ function App() {
           {/* Chat Component */}
           <Chat messages={messages} />
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

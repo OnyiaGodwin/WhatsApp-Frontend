@@ -39,4 +39,5 @@
   font-size: xx-small;
   position: relative;
   bottom: -10px;
+  align-content: flex-end;
 }

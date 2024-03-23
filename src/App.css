@@ -1,22 +1,30 @@
-.app{
-display: grid;
-place-items: center;
-height: 100vh;
-background-color: #dadbd3;
+.app {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #dadbd3;
+  /* background-color: #fff; */
+}
+
+.app__signIn {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #fff;
 }
 
 .app__body {
-display: flex;
-background-color: #ededed;
-margin-top: -50px;
-height: 90vh;
-width: 90vw;
-box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, .75);
+  display: flex;
+  background-color: #ededed;
+  margin-top: -50px;
+  height: 90vh;
+  width: 90vw;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
 }
 .app__sidebar {
-    flex: 0.35;
+  flex: 0.35;
 }
 
 .app__chat {
-    flex: 0.65;
+  flex: 0.65;
 }

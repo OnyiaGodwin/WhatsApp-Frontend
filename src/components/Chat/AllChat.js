@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./AllChat.module.css";
 
-export default function ChatReciver({ messages }) {
-  console.log("This is message in received msg:", messages);
+export default function AllChat({ messages }) {
+  // console.log("This is message in received msg:", messages);
 
   // className={`${myCss.my_class} ${myCss.my_class2}`}
 
@@ -27,9 +27,7 @@ export default function ChatReciver({ messages }) {
         </span>
         {messages.message}
 
-        <span className={classes.chat__timestamp}>
-          {messages.timestamp}
-        </span>
+        <span className={classes.chat__timestamp}>{messages.timestamp}</span>
       </p>
     </>
   );
